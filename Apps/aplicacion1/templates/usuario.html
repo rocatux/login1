@@ -1,0 +1,35 @@
+{% extends 'basePagina.html' %}
+{% load static %}
+{% block contenido %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<center>
+<form method="post">
+	<fieldset>
+ <div class="form-group">   
+	{% csrf_token %}
+
+	<!--{{ form.as_p }}-->
+     <br>Nombre de usuario<br> 
+     {{ form.username }}<br>
+	 <br>Nombres<br> 
+	 {{ form.first_name }}<br>
+	 <br>Apellidos<br>
+	 {{ form.last_name }}<br>
+     <br>Correo<br>
+     {{ form.email }}<br>
+     <br>Contraseña<br>
+     {{ form.password1 }}<br>
+     <br>Vuelva a ingresar contraseña<br>
+     {{ form.password2 }}<br><br>
+	<!--<button type="submit">Guardar</button>>-->
+	<input type="submit" name="Guardar">
+</div>
+</form>
+</center>
+ <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+</html>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'basePagina.html' %}
+{% block contenido%}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  {% for est in object_list %}
+  <tbody>
+
+    <tr class="table-success">
+      <th scope="row">{{ est.nombre }}</th>
+      <td>{{ est.descripcion }}</td>
+      <td><h5>Q {{ est.precio }}</h5></td>
+      <td>{{ est.cantidad }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> 
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<body background="{% static 'image/fondo.jpg' %}">
+
+  <form method="post">
+	{% csrf_token %}
+
+    <br><br><center><label for="username">Nombre de Usuario</label></center>
+	<center><input type="text" name="username"><br></center>
+    <center><label for="">Contraseña</label></center>
+	<center><input type="password" name="password"><br><br></center>
+	<center><input type="submit" value="Ingresar"></center>
+
+  </form>	
+     </body>
+</head>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'basePagina.html' %}
+{% block contenido%}
+
+  <center>
+   <form method="POST">
+   	{% csrf_token %}
+
+    <br>Nombre de Produto<br>
+    <br>{{ form.nombre}}<br>
+    <br>Descripcion <br>
+    <br>{{ form.descripcion }}<br>
+    <br>Precio<br> 
+    <br>{{ form.precio }}<br>
+    <br>Stock<br>
+    <br>{{ form.cantidad }}<br>
+    <br>
+    <input type="submit" name="Guardar">
+
+   </form>
+  </center>
+{% endblock %}
